@@ -1,0 +1,19 @@
+<p>List of especiales</p> <!--pre>{{users | json }}</pre--> 
+<table mat-table [dataSource]="especialidad" class="mat-elevation-z8"> 
+    <ng-container matColumnDef="IDespecialidad"> 
+        <th mat-header-cell *matHeaderCellDef> No. </th> 
+        <td mat-cell *matCellDef="let element"> 
+            <p>{{element.IDespecialidad}}</p> 
+        </td> </ng-container> <!-- Name Column --> 
+        <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef> Name </th> 
+            <td mat-cell *matCellDef="let element"> 
+                <p>{{element.nombre}}</p>
+            </td> </ng-container> <!-- Weight Column --> 
+            <ng-container matColumnDef="estado"> 
+                <th mat-header-cell *matHeaderCellDef> Last Name </th> 
+                <td mat-cell *matCellDef="let element"><p>{{element.estado}}</p> </td> 
+            </ng-container> 
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> 
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+</table>
